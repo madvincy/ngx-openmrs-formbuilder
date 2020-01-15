@@ -152,7 +152,6 @@ export class SaveFormsComponent extends DialogComponent<SaveFormModel, any> impl
     }
     this.saveFormService.uploadSchema(this.rawSchema).subscribe(valueReference => {
       this.saveFormService.saveNewForm(form.name, form.version, false, form.description, this.encounterTypeUUID).subscribe(createdForm => {
-
         const parsedRes = JSON.parse(createdForm._body);
         this.saveFormService.setNewFormUUID(parsedRes.uuid);
         this.saveFormService.getResourceUUID(parsedRes.uuid, valueReference).subscribe(resourceUUID => {

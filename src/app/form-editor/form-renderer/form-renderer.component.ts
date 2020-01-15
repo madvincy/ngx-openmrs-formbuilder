@@ -80,7 +80,7 @@ export class FormRendererComponent implements OnInit {
           mergeMap((form) => {
             encounterType = form.encounterType.uuid;
             return this.showDialog(EncounterModalDetailsComponent);
-          }),)
+          }), )
           .subscribe((results: any) => {
             if (results) {
                     $event.preventDefault();

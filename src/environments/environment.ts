@@ -6,6 +6,6 @@
 
 export const environment = {
   production: false,
-  date: '1552931783652',
+  date: '1579096626630',
   version: '1.0'
 };
